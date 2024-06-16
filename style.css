@@ -17,8 +17,13 @@ html {
 :root {
     --dark: #111;
     --black: #000;
-    --light: #f5f5dc;
-    --light-2: #f0e68c;
+    --grey-1: #eee;
+    --grey-2: #ccc;
+    --grey-3: #aaa;
+    --grey-4: #888;
+    --grey-5: #555;
+    --grey-6: #333;
+    --gold: #ffd700;
     --primary: #ff4500;
     --bord-rad: 0.3rem;
 }
@@ -32,7 +37,7 @@ html {
 .rectangle {
     width: 70rem;
     height: 40rem;
-    border: 0.1rem solid rgba(255, 68, 0, 0.1);
+    border: 0.1rem solid var(--grey-6);
     position: fixed;
 }
 
@@ -64,12 +69,56 @@ html {
     align-items: center;
 }
 
+.programmer div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 2rem;
+}
+
 .programmer img {
     width: 6rem;
     height: 6rem;
     object-fit: cover;
     border-radius: 50%;
-    border: 0.1rem solid var(--light-2);
+    border: 0.1rem solid var(--grey-6);
+}
+
+.programmer div span:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: var(--primary);
+    letter-spacing: 0.2rem;
+}
+
+.programmer div span:nth-child(2) {
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: var(--grey-2);
+    letter-spacing: 0.2rem;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 3rem;
+    right: 30rem;
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu-icon:hover {
+    transform: scaleY(1.4);
+}
+
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--primary);
 }
 
 .navigation {
